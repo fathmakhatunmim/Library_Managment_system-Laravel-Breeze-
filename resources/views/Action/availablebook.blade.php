@@ -1,8 +1,20 @@
+   {{-- <x-app-layout>
+ <x-slot name="header">
+        <div class="bg-[#EFFAFC] py-4 px-6 rounded-md shadow">
+           
+        </div>
+    </x-slot>
+</x-app-layout> --}}
+
+
+
+
 @extends('library.default')
 
 @section('title', "Available Books")
 
 @section('content')
+
 
 {{-- Navbar --}}
 <div class="navbar bg-[#383033] shadow-sm px-6 py-4 flex justify-between items-center">
@@ -22,9 +34,18 @@
             </button>
         </form>
 
+        <form method="POST" action="{{ route('logout') }}">
+            @csrf
+            <button 
+                class="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-all font-semibold">
+                Logout
+            </button>
+        </form>
+
         {{-- Dashboard Link --}}
      
     </div>
+ 
 </div>
 
 {{-- Main Content --}}
